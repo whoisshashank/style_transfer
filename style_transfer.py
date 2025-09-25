@@ -91,3 +91,4 @@ for step in range(total_steps):
         print(f"Step [{step}/{total_steps}], Loss: {total_loss.item():.4f}")
         save_image(unnormalize(generated), "generated.png")
 
+torch.save(generated.detach(), "generated.pth")
